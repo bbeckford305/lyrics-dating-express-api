@@ -44,6 +44,9 @@ router.post('/sign-up', (req, res, next) => {
     .then(hash => {
       // return necessary params to create a user
       return {
+        firstName: req.body.credentials.firstName,
+        lastName: req.body.credentials.lastName,
+        userName: req.body.credentials.userName,
         email: req.body.credentials.email,
         hashedPassword: hash
       }
@@ -137,5 +140,10 @@ router.delete('/sign-out', requireToken, (req, res, next) => {
     .then(() => res.sendStatus(204))
     .catch(next)
 })
+
+// // GET /examples
+// router.options('/contact-us', (req, res) => {
+//   return 'contact-us.html'
+// })
 
 module.exports = router
