@@ -14,8 +14,8 @@ curl "${API}${URL_PATH}" \
       "height": "'"${HEIGHT}"'",
       "sexPref": "'"${SPREF}"'",
       "sex": "'"${SEX}"'",
-      "relationship": "'"${RELAT}"'"
-
+      "relationship": "'"${RELAT}"'",
+      "funFact": "'"${FUNFACT}"'"
     }
   }'
 
